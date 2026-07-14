@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Us</title>
+</head>
+
+<body>
+
+    <nav>
+        index.html |
+        .html">Slime</a> |
+        overlord.html |
+        arifureta.htmlArifureta</a> |
+        mushoku.htmlMushoku Tensei</a> |
+        seirei.html">Seirei Gensouki</a> |
+        quiz.html |
+        contact.html |
+        <a href="l
+    </nav>
+
+    <h1>Contact Us</h1>
+
+    <p>
+        Have a question or suggestion?
+    </p>
+
+    <p>
+        Use the form below to contact the Isekai Legends team.
+    </p>
+
+    <form id="contactForm">
+
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" required><br><br>
+
+        <label for="favourite">Favourite Anime:</label><br>
+        <select id="favourite">
+            <option>That Time I Got Reincarnated as a Slime</option>
+            <option>Overlord</option>
+            <option>Arifureta</option>
+            <option>Mushoku Tensei</option>
+            <option>Seirei Gensouki</option>
+        </select><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" rows="5" cols="40" required></textarea><br><br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <p id="successMessage"></p>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            document.getElementById("successMessage").innerHTML =
+                "Thank you for contacting Isekai Legends!";
+        });
+    </script>
+
+    <hr>
+
+    <p>
+        Disclaimer: Isekai Legends is a fan-made educational website created for a web development project. All anime titles, characters and trademarks belong to their respective copyright owners.
+    </p>
+
+</body>
+
+</html>

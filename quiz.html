@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Anime Quiz Centre</title>
+
+    css/style.css
+</head>
+
+<body>
+
+    <nav>
+        index.htmlHome</a> |
+        slime.htmlSlime</a> |
+        overlord.htmlOverlord</a> |
+        arifureta.htmlArifureta</a> |
+        .html">Mushoku Tensei</a> |
+        <a hrefhtmlSeirei Gensouki</a> |
+        quiz.html |
+        contact.html |
+        about.html
+    </nav>
+
+    <h1>Anime Quiz Centre</h1>
+
+    <hr>
+
+    <h2>Which Anime Should You Watch?</h2>
+
+    <form id="animeQuiz">
+
+        <p><strong>1. What genre do you enjoy most?</strong></p>
+
+        <input type="radio" name="q1" value="slime"> Comedy<br>
+        <input type="radio" name="q1" value="overlord"> Dark Fantasy<br>
+        <input type="radio" name="q1" value="arifureta"> Action<br>
+        <input type="radio" name="q1" value="mushoku"> Adventure<br>
+        <input type="radio" name="q1" value="seirei"> Romance<br><br>
+
+        <p><strong>2. What type of hero do you prefer?</strong></p>
+
+        <input type="radio" name="q2" value="slime"> Friendly Leader<br>
+        <input type="radio" name="q2" value="overlord"> Powerful Ruler<br>
+        <input type="radio" name="q2" value="arifureta"> Survivor<br>
+        <input type="radio" name="q2" value="mushoku"> Mage<br>
+        <input type="radio" name="q2" value="seirei"> Swordsman<br><br>
+
+        <button type="button" onclick="animeResult()">
+            Get Result
+        </button>
+
+    </form>
+
+    <h3 id="animeResult"></h3>
+
+    <hr>
+
+    <h2>Which Character Are You?</h2>
+
+    <form id="characterQuiz">
+
+        <p><strong>1. What is your strongest trait?</strong></p>
+
+        <input type="radio" name="c1" value="rimuru"> Leadership<br>
+        <input type="radio" name="c1" value="ainz"> Intelligence<br>
+        <input type="radio" name="c1" value="hajime"> Determination<br>
+        <input type="radio" name="c1" value="rudeus"> Creativity<br>
+        <input type="radio" name="c1" value="rio"> Kindness<br><br>
+
+        <p><strong>2. How do you solve problems?</strong></p>
+
+        <input type="radio" name="c2" value="rimuru"> Diplomacy<br>
+        <input type="radio" name="c2" value="ainz"> Strategy<br>
+        <input type="radio" name="c2" value="hajime"> Strength<br>
+        <input type="radio" name="c2" value="rudeus"> Knowledge<br>
+        <input type="radio" name="c2" value="rio"> Persistence<br><br>
+
+        <button type="button" onclick="characterResult()">
+            Discover Character
+        </button>
+
+    </form>
+
+    <h3 id="characterResult"></h3>
+
+    <hr>
+
+    <p>
+        Disclaimer: Isekai Legends is a fan-made educational website created
+        for a web development project. All anime titles, characters and
+        trademarks belong to their respective copyright owners.
+    </p>
+
+    <script>
+
+        function animeResult() {
+
+            let answer1 =
+                document.querySelector('input[name="q1"]:checked');
+
+            if (!answer1) {
+                alert("Please answer the Anime Quiz first.");
+                return;
+            }
+
+            let anime = answer1.value;
+
+            let result = "";
+
+            if (anime === "slime") {
+                result = "You should watch That Time I Got Reincarnated as a Slime!";
+            }
+            else if (anime === "overlord") {
+                result = "You should watch Overlord!";
+            }
+            else if (anime === "arifureta") {
+                result = "You should watch Arifureta!";
+            }
+            else if (anime === "mushoku") {
+                result = "You should watch Mushoku Tensei!";
+            }
+            else {
+                result = "You should watch Seirei Gensouki!";
+            }
+
+            document.getElementById("animeResult").innerHTML = result;
+        }
+
+        function characterResult() {
+
+            let answer =
+                document.querySelector('input[name="c1"]:checked');
+
+            if (!answer) {
+                alert("Please answer the Character Quiz first.");
+                return;
+            }
+
+            let character = answer.value;
+
+            let result = "";
+
+            if (character === "rimuru") {
+                result = "You are Rimuru Tempest!";
+            }
+            else if (character === "ainz") {
+                result = "You are Ainz Ooal Gown!";
+            }
+            else if (character === "hajime") {
+                result = "You are Hajime Nagumo!";
+            }
+            else if (character === "rudeus") {
+                result = "You are Rudeus Greyrat!";
+            }
+            else {
+                result = "You are Rio!";
+            }
+
+            document.getElementById("characterResult").innerHTML = result;
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -15,6 +15,29 @@
 <p>
 Explore information about:
 </p>
+<h2>Vote For Your Favourite Anime</h2>
+
+<select id="animeVote">
+    <option>Slime</option>
+    <option>Overlord</option>
+    <option>Arifureta</option>
+    <option>Mushoku Tensei</option>
+    <option>Seirei Gensouki</option>
+</select>
+
+<button onclick="voteAnime()">Vote</button>
+
+<p id="voteResult"></p>
+
+<script>
+function voteAnime() {
+    let anime =
+        document.getElementById("animeVote").value;
+
+    document.getElementById("voteResult").innerHTML =
+        "You voted for " + anime + "!";
+}
+</script>    
 
 <ul>
     <li>That Time I Got Reincarnated as a Slime</li>
